@@ -29,9 +29,9 @@ box-sizing: border-box;
     margin: 2px 4px;
 }
 .title {
-    font-size: .9rem;
+    font-size: .7rem;
 }
 .channel {
-    font-size: .7rem;
+    font-size: .6rem;
     color: rgba(0,0,0,0.7);
 }
