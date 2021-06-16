@@ -9,7 +9,7 @@ const VideoSearch = ({onSearch}) => {
         const value = inputRef.current.value;
         onSearch(value);
         formRef.current.reset();
-    }
+}
 
     return (
         <form 
@@ -18,8 +18,9 @@ const VideoSearch = ({onSearch}) => {
         ref={formRef}>
             <span className={styles.logo}>
                 <img 
-                src="./images/logo.png" alt="search-logo"
-                className={styles.logoImage}/>
+                src="./images/logo.png"
+                alt="search-logo"
+                className={styles.logoImage} />
                 <h1 className={styles.logoName}>Youtube</h1>
             </span>
             <input 

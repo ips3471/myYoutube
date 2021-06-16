@@ -3,9 +3,14 @@ box-sizing: border-box;
 }
 
 .container {
-    width: 50%;
     cursor: pointer;
     padding: 0.2rem;
+}
+.container.list {
+    width: 100%;
+}
+.container.grid {
+    width: 50%;
 }
 .thumbnail {
     width: 60%;
@@ -23,13 +28,15 @@ box-sizing: border-box;
 .metadata{
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
 }
 .metadata > p {
     margin: 2px 4px;
 }
 .title {
     font-size: .7rem;
+    max-height: 3rem;
+    overflow: hidden;
 }
 .channel {
     font-size: .6rem;
