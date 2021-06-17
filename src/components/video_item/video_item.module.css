@@ -14,7 +14,6 @@ box-sizing: border-box;
 }
 .thumbnail {
     width: 60%;
-    height: 100%;
 }
 .video {
     display: flex;
@@ -41,4 +40,10 @@ box-sizing: border-box;
 .channel {
     font-size: .6rem;
     color: rgba(0,0,0,0.7);
+}
+
+@media screen and (max-width: 1000px) {
+    .thumbnail {
+        width: 20%;
+    }
 }

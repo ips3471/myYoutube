@@ -11,10 +11,13 @@ function App({youtube}) {
   
   const selectVideo = video => {
     setSelectedVideo(video);
+    window.scrollTo(0, 0);
   }
   const search = query => {
     youtube.search(query)
     .then(videos => setVideos(videos))
+    setSelectedVideo(); //search버튼을 누르면 selectedVideo를 false(빈공간)로 만들어서 처리;
+
   }
 
   useEffect(() => {
