@@ -2,19 +2,25 @@
 box-sizing: border-box;
 }
 
+
 .container {
     cursor: pointer;
     padding: 0.2rem;
 }
+
 .container.list {
     width: 100%;
 }
 .container.grid {
     width: 50%;
 }
-.thumbnail {
+.thumbnail.list {
     width: 60%;
 }
+.thumbnail.grid {
+    width: 60%;
+}
+
 .video {
     display: flex;
     transition: transform 300ms ease-in-out;
@@ -42,8 +48,16 @@ box-sizing: border-box;
     color: rgba(0,0,0,0.7);
 }
 
-@media screen and (max-width: 1000px) {
-    .thumbnail {
+@media screen and (max-width: 1000px) { 
+    .thumbnail.list {
         width: 20%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .container.grid {
+        width: 100%;
+    }
+    .thumbnail.grid {
+        width: 35%;
     }
 }

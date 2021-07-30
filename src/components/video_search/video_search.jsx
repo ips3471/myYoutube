@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
+import { memo } from 'react';
 import styles from './video_search.module.css';
 
-const VideoSearch = ({onSearch}) => {
+const VideoSearch = memo(({onSearch, onLogoClick}) => {
     const inputRef = useRef();
     const formRef = useRef();
     const onSubmit = (e) => {
@@ -10,19 +11,20 @@ const VideoSearch = ({onSearch}) => {
         onSearch(value);
         formRef.current.reset();
 }
-
     return (
         <form 
         className={styles.header}
         onSubmit={onSubmit}
         ref={formRef}>
-            <span className={styles.logo}>
+            <button 
+            className={styles.logo}
+            onClick={onLogoClick}>
                 <img 
-                src="./images/logo.png"
+                src={process.env.PUBLIC_URL + '/images/logo.png'}
                 alt="search-logo"
                 className={styles.logoImage} />
                 <h1 className={styles.logoName}>Youtube</h1>
-            </span>
+            </button>
             <input 
             className={styles.input} 
             type="search"
@@ -30,13 +32,13 @@ const VideoSearch = ({onSearch}) => {
             />
             <button className={styles.searchButton}>
                 <img 
-                src="./images/search.png" 
+                src={process.env.PUBLIC_URL + '/images/search.png'}
                 alt="search-icon"
-                className={styles.buttonImage}/>
+                className={styles.buttonImage} />
             </button>
         </form>
     )
-}
+});
 
 
 
